@@ -1,0 +1,54 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redis
+      project: hipstershop
+      tier: db
+  template:
+    metadata:
+      labels:
+        app: redis
+        project: hipstershop
+        tier: db
+    spec:
+      containers:
+        - name: server
+          image: redis:alpine
+          ports:
+          - containerPort: 6379
+          resources:
+            requests:
+              cpu: 125m
+              memory: 256Mi
+            limits:
+              cpu: 70m
+              memory: 200Mi
+          volumeMounts:
+          - name: redis-data
+            mountpath: /data
+      volumes: 
+      - name: redis-data
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+spec:
+  type: ClusterIP # by default ClusterIP
+  selector:
+    app: redis
+    project: hipstershop
+    tier: db
+  ports:
+  - protocol: TCP
+    port: 6379 #service-port
+    targetPort: 6379 #container-port
