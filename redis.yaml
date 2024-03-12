@@ -50,7 +50,7 @@ kind: Service
 metadata:
   name: redis
 spec:
-  type: ClusterIP # by default ClusterIP
+  clusterIP: None # by default ClusterIP type: ClusterIP
   selector:
     app: redis
     project: hipstershop
