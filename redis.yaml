@@ -34,7 +34,7 @@ spec:
               memory: 200Mi
           volumeMounts:
           - name: redis-data
-            mountpath: /data
+            mountPath: /data
   volumeClaimTemplates:
   - metadata: 
       name: redis-data
