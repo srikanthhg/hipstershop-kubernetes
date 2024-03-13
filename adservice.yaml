@@ -6,8 +6,7 @@ data:
   PORT: "9555"
   DISABLE_PROFILER: "1"
   PYTHONUNBUFFERED: "1"
-  PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550"
-  
+  PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550" 
 ---
 apiVersion: apps/v1
 kind: Deployment
