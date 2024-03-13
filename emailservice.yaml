@@ -33,7 +33,7 @@ spec:
           ports:
           - containerPort: 8080
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: emailservice
           resources:
             requests:

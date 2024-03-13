@@ -32,7 +32,7 @@ spec:
           ports:
           - containerPort: 50051
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: shippingservice
           resources:
             requests:

@@ -32,7 +32,7 @@ spec:
           ports:
           - containerPort: 7000
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: currencyservice
           resources:
             requests:

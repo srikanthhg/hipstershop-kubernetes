@@ -33,7 +33,7 @@ spec:
           ports:
           - containerPort: 7070
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: cartservice
           resources:
             requests:

@@ -39,7 +39,7 @@ spec:
           ports:
           - containerPort: 5050
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: checkoutservice
           resources:
             requests:

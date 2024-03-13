@@ -34,7 +34,7 @@ spec:
           ports:
           - containerPort: 9555
           envFrom:
-          - ConfigMapref:
+          - ConfigMapRef:
               name: adservice
           resources:
             requests:
