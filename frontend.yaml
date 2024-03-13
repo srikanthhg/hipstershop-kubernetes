@@ -37,7 +37,7 @@ spec:
           ports:
           - containerPort: 8080
           envFrom:
-          - ConfigMapRef:
+          - configMapRef:
               name: frontend
           resources:
             requests:

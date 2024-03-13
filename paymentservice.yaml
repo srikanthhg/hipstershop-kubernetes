@@ -32,7 +32,7 @@ spec:
           ports:
           - containerPort: 50051
           envFrom:
-          - ConfigMapRef:
+          - configMapRef:
               name: paymentservice
           resources:
             requests:

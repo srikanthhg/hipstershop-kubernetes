@@ -31,7 +31,7 @@ spec:
           ports:
           - containerPort: 3550
           envFrom:
-          - ConfigMapRef:
+          - configMapRef:
               name: productcatalogservice
           resources:
             requests:
