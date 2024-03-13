@@ -1,9 +1,9 @@
 FROM python:3.10.13-slim as base
 
 FROM base as builder
-
+WORKDIR /app
 # get packages
-COPY requirements.txt /usr/local/lib/python3.10/         
+COPY requirements.txt /app/         
 
 RUN pip install -r requirements.txt
 
