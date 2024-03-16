@@ -28,7 +28,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: cart
           image: srikanthhg/cartservice:v1
           ports:
           - containerPort: 7070

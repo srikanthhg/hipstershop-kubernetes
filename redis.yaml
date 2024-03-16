@@ -21,7 +21,7 @@ spec:
         tier: db
     spec:
       containers:
-        - name: server
+        - name: redis
           image: redis
           ports:
           - containerPort: 6379

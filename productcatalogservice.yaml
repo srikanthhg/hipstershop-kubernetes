@@ -26,7 +26,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: productcatalog
           image: srikanthhg/productcatalogservice:v1
           ports:
           - containerPort: 3550

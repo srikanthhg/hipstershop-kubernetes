@@ -28,7 +28,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: email
           image: srikanthhg/emailservice:v1
           ports:
           - containerPort: 8080

@@ -27,7 +27,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: currency
           image: srikanthhg/currencyservice:v1
           ports:
           - containerPort: 7000

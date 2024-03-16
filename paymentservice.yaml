@@ -27,7 +27,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: payment
           image: srikanthhg/paymentservice:v1
           ports:
           - containerPort: 50051

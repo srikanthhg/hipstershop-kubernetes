@@ -27,7 +27,7 @@ spec:
         tier: app
     spec:
       containers:
-        - name: server
+        - name: shipping
           image: srikanthhg/shippingservice:v1
           ports:
           - containerPort: 50051

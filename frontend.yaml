@@ -32,7 +32,7 @@ spec:
         tier: web
     spec:
       containers:
-        - name: server
+        - name: frontend
           image: srikanthhg/frontend:v1
           ports:
           - containerPort: 8080
