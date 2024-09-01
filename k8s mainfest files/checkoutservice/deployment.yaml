@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkoutservice
+  labels:
+    app: checkoutservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: checkoutservice
+      project: hipstershop
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: checkoutservice
+        project: hipstershop
+        tier: app
+    spec:
+      containers:
+        - name: checkout
+          image: srikanthhg/checkoutservice:v1
+          ports:
+          - containerPort: 5050
+          envFrom:
+          - configMapRef:
+              name: checkoutservice
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
